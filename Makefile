@@ -1,0 +1,16 @@
+.PHONY: up down logs restart
+
+up:
+	docker-compose up -d
+
+down:
+	docker-compose down
+
+logs:
+	docker-compose logs -f
+
+restart:
+	docker-compose down && docker-compose up -d
+
+run:
+	cd ./app && pnpm run dev
