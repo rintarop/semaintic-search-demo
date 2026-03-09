@@ -39,8 +39,19 @@ A semantic search demonstration using Weaviate vector database and the TMDB 5000
 - Docker and Docker Compose
 - Node.js 20+ (for local development)
 - pnpm (package manager)
+- Kaggle account (for dataset download)
 
 ## Quick Start
+
+### 0. Download Dataset
+
+First, download the TMDB dataset from Kaggle:
+
+1. Visit [Kaggle - TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+2. Download `tmdb_5000_movies.csv`
+3. Place it in the `data/` directory: `data/tmdb_5000_movies.csv`
+
+> **Note**: The dataset is not included in this repository due to size and licensing. You must download it from Kaggle.
 
 ### 1. Start Weaviate and Transformers Service
 
@@ -246,10 +257,16 @@ Source Properties: ["overview"]
 
 **TMDB 5000 Movies Dataset**
 
-- Source: [The Movie Database (TMDB)](https://www.themoviedb.org/)
-- Size: 5,000 movies
-- Fields: title, overview, genres, release date, ratings, popularity
-- Location: `data/tmdb_5000_movies.csv`
+- **Source**: [Kaggle - TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- **Original Data**: [The Movie Database (TMDB)](https://www.themoviedb.org/)
+- **Size**: 5,000 movies
+- **Fields**: title, overview, genres, release date, ratings, popularity
+- **Location**: `data/tmdb_5000_movies.csv`
+- **License**: CC0: Public Domain (see License section below)
+
+### Attribution
+
+This product uses the TMDb API but is not endorsed or certified by TMDb. The dataset was obtained from Kaggle and is used for educational and demonstration purposes only.
 
 ## Troubleshooting
 
@@ -292,7 +309,33 @@ curl http://localhost:8080/v1/.well-known/ready
 
 ## License
 
-This project is for educational and demonstration purposes.
+### Project Code
+
+This project code is available under the MIT License for educational and demonstration purposes.
+
+### Dataset License
+
+The TMDB 5000 Movies Dataset used in this project:
+- **Source**: [Kaggle - TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- **License**: CC0: Public Domain
+- **Original Data**: The Movie Database (TMDB)
+
+**Important Notes**:
+- This product uses the TMDB dataset obtained from Kaggle
+- TMDB® is a registered trademark of The Movie Database
+- This project is not endorsed or certified by TMDB
+- The dataset is used for educational and non-commercial purposes only
+- If you plan to use this project commercially, please review TMDB's [Terms of Use](https://www.themoviedb.org/terms-of-use) and obtain necessary permissions
+
+### Third-Party Licenses
+
+- **Weaviate**: BSD 3-Clause License
+- **Next.js**: MIT License
+- **Sentence Transformers**: Apache License 2.0
+
+## Disclaimer
+
+This is a demonstration project for educational purposes. The movie data is provided "as is" without warranty. Always verify licensing requirements for production use.
 
 ## Contributing
 
@@ -300,7 +343,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgments
 
+- [Kaggle](https://www.kaggle.com/) - Dataset hosting platform
+- [TMDB](https://www.themoviedb.org/) - Original movie data source
 - [Weaviate](https://weaviate.io/) - Open source vector database
 - [Sentence Transformers](https://www.sbert.net/) - Text embedding models
-- [TMDB](https://www.themoviedb.org/) - Movie dataset
 - [Next.js](https://nextjs.org/) - React framework

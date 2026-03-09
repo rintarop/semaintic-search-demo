@@ -1,1 +1,35 @@
+# IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dataset (download from Kaggle)
+data/*.csv
+data/*.json
+!data/README.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+dist/
+build/
+
+# Docker volumes
+volumes/
